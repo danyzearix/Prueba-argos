@@ -1,0 +1,33 @@
+ /* Estilo para el contenedor de la imagen */
+ .image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Estilo para el resaltado */
+  .highlight {
+    position: absolute;
+    border: 2px solid red; /* Color y grosor del borde de resaltado */
+    pointer-events: none; /* Evita que el borde interfiera con eventos de ratón */
+    z-index: 1; /* Asegura que el borde esté encima de la imagen */
+  }
+
+  /* Estilo para centrar los elementos */
+  .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .row{
+    justify-content: center;
+  }
+
+  .tablaResultados{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+
+  
