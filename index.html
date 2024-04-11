@@ -6,7 +6,11 @@
 <title>Resaltar parte de una imagen</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style>
-   /* Estilo para el contenedor de la imagen */
+  
+  /* Estilo para el contenedor de la imagen */
+  .calculadoraBody{
+    background-color: #0F1D4A;
+  }
 
    input:focus {
   background-color: #C4D600; 
@@ -54,9 +58,19 @@
     font-family: Arial, sans-serif;
   }
 
-  .table th, .table td {
+  .table th {
     border: 1px solid #ddd;
     padding: 8px;
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+  }
+
+  .table td{
+    background-color: #ced4da;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
   }
 
   .table thead {
@@ -90,10 +104,12 @@
   }
 
   #guardarDatos {
-    width: 100%; /* Makes the button take the full width of the div */
+    width: 30%; /* Makes the button take the full width of the div */
     background-color: #C4D600; /* Same color as the table header */
     color: white;
     border: none;
+    font-size: large;
+    font-weight: 600;
   }
 
   .btn-primary:hover {
@@ -117,13 +133,14 @@
     background-color: #0F1D4A;
   }
 
+  .imprimir{
+    background-color: #C4D600;
+    border: none;
+    font-weight: 800;
+  }
 </style>
 </head>
-<body>
-
-  <div class="container-fluid backgroundText">
-  <h1 class="text-center greenTitle">INGRESA LOS DATOS</h1>
-</div>
+<body class="calculadoraBody">
 
 <div class="container-fluid">
   <div class="row justify-content-center">
@@ -132,46 +149,46 @@
       <!-- Inputs sin área de resaltado en la imagen -->
       <div class="row">
         <div class="col-md-3 mb-2">
-            <input type="text" id="ancho_subbase" class="form-control inputcalculo" placeholder="Ancho Subbase">
+            <input type="text" id="ancho_subbase" class="form-control inputcalculo" placeholder="Ancho Subbase - Metros">
         </div>
         <div class="col-md-3 mb-2">
-            <input type="text" id="espesor_subbase" class="form-control inputcalculo" placeholder="Espesor Subbase">
+            <input type="text" id="espesor_subbase" class="form-control inputcalculo" placeholder="Espesor Subbase - Metros">
         </div>
         <div class="col-md-3 mb-2">
-            <input type="text" id="ancho_placa_huella" class="form-control inputcalculo" placeholder="Ancho Placa Huella">
+            <input type="text" id="ancho_placa_huella" class="form-control inputcalculo" placeholder="Ancho Placa Huella - Metros">
         </div>
         <div class="col-md-3 mb-2">
-            <input type="text" id="ancho_huella" class="form-control inputcalculo" placeholder="Ancho Huella">
+            <input type="text" id="ancho_huella" class="form-control inputcalculo" placeholder="Ancho Huella - Metros">
         </div>
         <div class="col-md-3 mb-2">
-            <input type="text" id="longitud_huella" class="form-control inputcalculo" placeholder="Longitud Huella">
+            <input type="text" id="longitud_huella" class="form-control inputcalculo" placeholder="Longitud Huella - Metros">
         </div>
         <div class="col-md-3 mb-2">
-            <input type="text" id="espesor_huella" class="form-control inputcalculo" placeholder="Espesor Huella">
+            <input type="text" id="espesor_huella" class="form-control inputcalculo" placeholder="Espesor Huella - Metros">
         </div>
         <div class="col-md-3 mb-2">
-            <input type="text" id="altura_viga_riostra" class="form-control inputcalculo" placeholder="Altura Viga Riostra">
+            <input type="text" id="altura_viga_riostra" class="form-control inputcalculo" placeholder="Altura Viga Riostra - Metros">
         </div>
         <div class="col-md-3 mb-2">
-            <input type="text" id="ancho_viga_riostra" class="form-control inputcalculo" placeholder="Ancho Viga Riostra">
+            <input type="text" id="ancho_viga_riostra" class="form-control inputcalculo" placeholder="Ancho Viga Riostra - Metros">
         </div>
         <div class="col-md-3 mb-2">
-            <input type="text" id="ancho_cuneta" class="form-control inputcalculo" placeholder="Ancho Cuneta">
+            <input type="text" id="ancho_cuneta" class="form-control inputcalculo" placeholder="Ancho Cuneta - Metros">
         </div>
         <div class="col-md-3 mb-2">
-            <input type="text" id="altura_bordillo" class="form-control inputcalculo" placeholder="Altura Bordillo">
+            <input type="text" id="altura_bordillo" class="form-control inputcalculo" placeholder="Altura Bordillo - Metros">
         </div>
         <div class="col-md-3 mb-2">
-            <input type="text" id="ancho_bordillo" class="form-control inputcalculo" placeholder="Ancho Bordillo">
+            <input type="text" id="ancho_bordillo" class="form-control inputcalculo" placeholder="Ancho Bordillo - Metros">
         </div>
         <div class="col-md-3 mb-2">
-            <input type="text" id="ancho_ciclopeo_central" class="form-control inputcalculo" placeholder="Ancho Ciclopeo Central">
+            <input type="text" id="ancho_ciclopeo_central" class="form-control inputcalculo" placeholder="Ancho Ciclopeo Central - Metros">
         </div>
         <div class="col-md-3 mb-2">
-            <input type="text" id="ancho_sobreciclopeo" class="form-control inputcalculo" placeholder="Ancho Sobreancho Ciclopeo">
+            <input type="text" id="ancho_sobreciclopeo" class="form-control inputcalculo" placeholder="Ancho Sobreancho Ciclopeo - Metros" disabled>
         </div>
         <div class="col-md-3 mb-2">
-            <input type="text" id="espacio_entre_riostras" class="form-control inputcalculo" placeholder="Espacio Entre Riostras">
+            <input type="text" id="espacio_entre_riostras" class="form-control inputcalculo" placeholder="Espacio Entre Riostras - Metros">
         </div>
         
         <div class="col-md-12 mb-2 centered-button">
@@ -283,6 +300,11 @@
 </div>
 
 </div>
+    <div class="col-md-12 mb-2 centered-button">
+      <button class="btn btn-primary mb-3 mt-4 imprimir" onclick="imprimir()">Imprimir Página 🖨️</button>
+    </div>
+
+<!-- Botón que, al hacer clic, llama a la función imprimir() -->
 <script>
   // Obtener los inputs
 const inputs = document.querySelectorAll('input');
@@ -665,8 +687,7 @@ pesoTotal: function() {
 
 //Calculo peso
 let pesoTotal = parseFloat(alambreDeAmarreMediaPul.pesoTotal()) + parseFloat(alambreDeAmarreCuartoPul.pesoTotal()) + parseFloat(alambreDeAmarreTresOctPul.pesoTotal()) 
-let alambreKg = alambreDeAmarreMediaPul.cantVarillas() + alambreDeAmarreCuartoPul.cantVarillasDos() + alambreDeAmarreTresOctPul.cantVarillas
-
+let alambreKg = (pesoTotal /1000) *35
 
 let materialesMetroCubiConcreto = {
 resistenciapsi: 3000,
@@ -685,7 +706,7 @@ volumenConcretoXModulo: function() {
   console.log("Cuneta volumen:", cunetaVol);
   console.log("Bordillo volumen:", bordilloVol);
 
-  return parseFloat(huellaVol) + parseFloat(vigaVol) + parseFloat(volumenCiclopeoConcreto) + parseFloat(cunetaVol) + parseFloat(bordilloVol);
+  return parseFloat(huellaVol) + parseFloat(vigaVol) + parseFloat(volumenCiclopeoConcreto) + parseFloat(cunetaVol) + parseFloat(bordilloVol) - 0.37;
 }
 
 };
@@ -702,7 +723,7 @@ console.log(`Cemento calculos finales = ${calculosFinales.cemento}`)
 
 //Cemento UG x 50 KG
 let cementoUg = calculosFinales.cemento / 50
-console.log(`Cemento ug es ${cementoUg} dividido 50`)
+console.log(`calculos finales = ${calculosFinales.cemento} y cementro volumen metro cubico ${materialesMetroCubiConcreto.volumenConcretoXModulo()}`)
     
     console.log(
       "Ancho SubBase: " + anchoSubBase + "\n" +
@@ -726,39 +747,45 @@ console.log(`Cemento ug es ${cementoUg} dividido 50`)
     // Renderizas el resultado en el elemento HTML
     document.getElementById("cantidad_material_subbase").textContent = resultadoVolumen;
 
-    let resultadoConcreto =  materialesMetroCubiConcreto.volumenConcretoXModulo();
+    let resultadoConcreto = materialesMetroCubiConcreto.volumenConcretoXModulo().toFixed(2) ;
     document.getElementById("cantidad_concreto").textContent = resultadoConcreto;
 
-    let resultadoCemento = cementoUg
+    let resultadoCemento = cementoUg.toFixed(0)
     document.getElementById("cantidad_cemento").textContent = resultadoCemento;
 
-    let resultadoArena = calculosFinales.arena
-    document.getElementById("cantidad_arena").textContent = resultadoArena;
+    let resultadoArena = calculosFinales.arena.toFixed(2)
+    document.getElementById("cantidad_arena").textContent = Math.ceil(resultadoArena);
 
-    let resultadoGrava = calculosFinales.grava
-    document.getElementById("cantidad_grava").textContent = resultadoGrava;
+    let resultadoGrava = calculosFinales.grava.toFixed(2)
+    document.getElementById("cantidad_grava").textContent = Math.ceil(resultadoGrava);
 
-    let resultadoAgua = calculosFinales.agua
-    document.getElementById("cantidad_agua").textContent = resultadoAgua;
+    let resultadoAgua = calculosFinales.agua.toFixed(2)
+    document.getElementById("cantidad_agua").textContent = Math.ceil(resultadoAgua);
 
-    let resultadoCiclopeoPiedra = volumenCiclopeoPiedra
+    let resultadoCiclopeoPiedra = volumenCiclopeoPiedra.toFixed(2)
     document.getElementById("cantidad_piedra_ciclopeo").textContent = resultadoCiclopeoPiedra;
 
-    let resultadoAlambreMediaPulgada = alambreDeAmarreMediaPul.cantVarillas()
+    let resultadoAlambreMediaPulgada = alambreDeAmarreMediaPul.cantVarillas().toFixed(0)
     document.getElementById("cantidad_varilla_1_2").textContent = resultadoAlambreMediaPulgada;
 
-    let resultadoAlambreUnCuarto = parseFloat(alambreDeAmarreCuartoPul.cantVarillasDos())
+    let resultadoAlambreUnCuarto = parseFloat(alambreDeAmarreCuartoPul.cantVarillasDos()).toFixed(0)
     document.getElementById("cantidad_varilla_1_4").textContent = resultadoAlambreUnCuarto;
 
-    let resultadoAlambreTresOctavos = bordilloAceroGanchos.cantidadVarillas()
+    let resultadoAlambreTresOctavos = bordilloAceroGanchos.cantidadVarillas().toFixed(0)
     document.getElementById("cantidad_varilla_3_8").textContent = resultadoAlambreTresOctavos;
 
-    let resultadoAlambreAmarre = parseFloat(pesoTotal)
-    document.getElementById("cantidad_alambre_amarre").textContent = resultadoAlambreAmarre;
+    let resultadoAlambreAmarre = parseFloat(alambreKg).toFixed(2)
+    document.getElementById("cantidad_alambre_amarre").textContent = Math.floor(resultadoAlambreAmarre);
+    
     
 });
 
 </script>
+
+<script>// Función que se ejecuta al hacer clic en el botón
+  function imprimir() {
+    window.print(); // Abre el cuadro de diálogo de impresión
+  }</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
